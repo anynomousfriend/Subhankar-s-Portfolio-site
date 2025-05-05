@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "tailwindcss";
+
+body {
+  font-family: "Bebas Neue", serif;
+  background-color: black;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@theme {
+  --color-primary: black;
+
+  --color-light-100: #cecefb;
+  --color-light-200: #a8b5db;
+
+  --color-gray-100: #9ca4ab;
+
+  --color-dark-100: #0f0d23;
+
+  --breakpoint-xs: 480px;
+}
+
+h1 {
+  @apply max-w-4xl text-left text-9xl font-bold mt-[1rem] leading-tight tracking-[-1%] text-white sm:text-[96px] sm:leading-[70px];
+}
+
+h2 {
+  font-size: 2rem;
+  @apply max-w-4xl text-left text-9xl sm:leading-[70px] sm:text-[96px];
+}
+h4,
+p {
+  font-family: "Saira Condensed";
+}
+main {
+  @apply min-h-screen relative bg-primary;
+}
+
+header {
+  align-items: baseline;
+  display: flex;
+  align-items: flex-start;
+  justify-content: left; /* Centers items horizontally */
+}
+
+.wrapper {
+  @apply px-5 py-12 xs:p-10 max-w-7xl mx-auto flex flex-col relative z-10;
+}
