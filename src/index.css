@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import "tailwindcss";
 
 body {
-  font-family: "Bebas Neue", serif;
+  font-family: "Bebas Neue", "Playfair", serif;
   background-color: black;
+  scroll-behavior: smooth;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -24,19 +26,19 @@ body {
 }
 
 h1 {
-  @apply max-w-4xl text-left text-9xl font-bold mt-[1rem] leading-tight tracking-[-1%] text-white sm:text-[96px] sm:leading-[70px];
+  @apply text-8xl lg:max-w-4xl md:text-left lg:text-9xl font-bold mt-[1rem] leading-tight tracking-[-1%] text-white sm:text-[96px] sm:leading-[70px];
 }
 
 h2 {
   font-size: 2rem;
-  @apply max-w-4xl text-left text-9xl sm:leading-[70px] sm:text-[96px];
+  @apply text-8xl leading-[140px] md:max-w-4xl md:text-left md:text-9xl md:leading-[170px] md:text-[96px];
 }
 h4,
 p {
   font-family: "Saira Condensed";
 }
 main {
-  @apply min-h-screen relative bg-primary;
+  @apply max-h-screen h-[35vh] relative bg-primary;
 }
 
 header {
