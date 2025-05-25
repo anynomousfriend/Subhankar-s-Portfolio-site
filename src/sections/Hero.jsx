@@ -15,21 +15,21 @@ const Hero = () => {
       </div>
       <div className="wrapper relative z-10">
         <header className="w-full flex flex-col mt-4 sm:mt-6 md:mt-9 items-center lg:mt-[169px] lg:mb-[1rem]">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-wide text-center sm:text-left">
+          <h1 className="text-[5.75rem] sm:text-5xl md:text-6xl lg:text-[4rem] xl:text-8xl font-bold tracking-wide text-center sm:text-left px-2 sm:px-0">
             SUBHANKAR.
           </h1>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mt-1 sm:mt-2 w-full text-center sm:text-left">
+          <h2 className="text-xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mt-1 sm:mt-2 w-full text-center sm:text-left">
             👨🏻‍💻
           </h2>
         </header>
         <div className="skill-dets text-white gap-2.5 sm:gap-3 md:gap-4 flex flex-col items-center sm:items-center md:items-center lg:items-start lg:flex-row lg:justify-between mt-4 sm:mt-6 md:mt-8 lg:mt-10">
-          <h4 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-center lg:text-left">
+          <h4 className="text-sm sm:text-lg md:text-xl lg:text-2xl font-medium text-center lg:text-left">
             Front-End & Blockchain
           </h4>
-          <h4 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-center lg:text-left">
+          <h4 className="text-sm sm:text-lg md:text-xl lg:text-2xl font-medium text-center lg:text-left">
             Design Professional & UX .
           </h4>
-          <h4 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-center lg:text-left">
+          <h4 className="text-sm sm:text-lg md:text-xl lg:text-2xl font-medium text-center lg:text-left">
             BASED IN <span className="font-bold">INDIA</span>
           </h4>
         </div>

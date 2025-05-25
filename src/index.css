@@ -26,7 +26,7 @@ body {
 }
 
 h1 {
-  @apply text-8xl lg:max-w-4xl md:text-left lg:text-9xl font-bold mt-[1rem] leading-tight tracking-[-1%] text-white sm:text-[96px] sm:leading-[70px];
+  @apply text-8xl lg:max-w-4xl md:text-left  font-bold mt-[1rem] leading-tight tracking-[-1%] text-white sm:text-[96px] sm:leading-[70px];
 }
 
 h2 {
