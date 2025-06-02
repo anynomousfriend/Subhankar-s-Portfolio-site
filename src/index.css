@@ -10,6 +10,8 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%;
 }
 
 @theme {
@@ -26,7 +28,11 @@ body {
 }
 
 h1 {
-  @apply text-8xl lg:max-w-4xl md:text-left  font-bold mt-[1rem] leading-tight tracking-[-1%] text-white sm:text-[96px] sm:leading-[70px];
+  @apply text-7xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 
+         font-bold  
+         leading-[1.25]
+         mt-4 
+         text-white;
 }
 
 h2 {

@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden px-4 py-4 sm:py-6 md:py-8 mb-0"
+      className="relative overflow-hidden px-4 py-4 sm:py-6 md:py-8 mb-4"
     >
       <div className="pattern absolute z-1 h-[10rem] w-[10rem] sm:h-[15rem] sm:w-[15rem] md:h-[20rem] md:w-[20rem] lg:h-[27.75rem] lg:w-[27.75rem] left-[-2rem] sm:left-[-3rem] md:left-[-4rem] lg:left-[-6.25rem] top-[-3rem] sm:top-[-5rem] md:top-[-8rem] lg:top-[-11.875rem]">
         <img

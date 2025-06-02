@@ -1,6 +1,7 @@
 import React from "react";
 import Nav from "./components/Nav";
-import About from "./components/About";
+import About from "./sections/About";
+import Skills from "./sections/Skills";
 
 import Hero from "./sections/Hero";
 import WorkExp from "./sections/WorkExp";
@@ -11,6 +12,7 @@ const App = () => {
     <>
       <Nav />
       <Hero />
+      <Skills />
       <About />
       <WorkExp />
       <Footer />

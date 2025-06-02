@@ -4,12 +4,12 @@ const Footer = () => {
   return (
     <section>
       <footer className="m-4">
-        <div className="flex flex-col lg:flex-row justify-between mx-[64px]  border-white">
-          <div className="left lg:w-1/2 py-4">
+        <div className="flex flex-col lg:flex-row justify-between lg:mx-[64px]  border-white">
+          <div className="left lg:w-1/2  sm:w-4/5 py-4">
             <h1 className="text-[196px] border-t-2 w-100 sm:text-lg md:text-xl lg:text-5xl font-bold pt-8">
               Subhankar
             </h1>
-            <p className="text-[16px] font-light text-left text-white sm:text-lg md:text-xl lg:text-lg mt-2">
+            <p className="text-[16px] p-1 font-light text-left text-white sm:text-lg md:text-xl lg:text-lg mt-2">
               I'm open to new opportunities! With strong design skills and
               growing development expertise, I bring a unique mix that can add
               real value to your next project. Let's connect!
