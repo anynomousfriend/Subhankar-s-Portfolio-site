@@ -33,3 +33,26 @@ export const experience = [
       "As a UI designer for PoolFunders, my focus is on creating clear, intuitive interfaces for both creators and backers navigating the decentralized crowdfunding space on Avalanche. This involves simplifying complex DeFi concepts like staking and token rewards, ensuring a seamless investment process in DAI, and visually representing transparent, real-time platform data. The goal is to build trust and encourage participation through user-friendly design, making the power of decentralized funding accessible to everyone.",
   },
 ];
+
+export const hero = [{
+  title: "SUBHANKAR.",
+  emoji: "👨🏻‍💻",
+  skills: ["Front-End & Blockchain", "Design Professional & UX", "Based in India"],
+  socialLinks: [
+    { href: "https://dribbble.com/subhankarchoudhury", label: "Dribbble" },
+    { href: "https://github.com/subhankarchoudhury", label: "GitHub" },
+    { href: "https://x.com/SsubhankarX?t=S2s-0mx5Vex7yhfwe5iUng&s=09", label: "x" },
+    { href: "https://www.linkedin.com/in/subhankarchoudhury/", label: "LinkedIn" },
+  ],
+}]
+
+export const footer = [{
+  title: "SUBHANKAR.",
+  description: "I'm open to new opportunities! With strong design skills and growing development expertise, I bring a unique mix that can add real value to your next project. Let's connect!",
+  socialLinks: [
+    { href: "https://dribbble.com/subhankarchoudhury", label: "Dribbble" },
+    { href: "https://github.com/subhankarchoudhury", label: "GitHub" },
+    { href: "https://x.com/SsubhankarX?t=S2s-0mx5Vex7yhfwe5iUng&s=09", label: "x" },
+    { href: "https://www.linkedin.com/in/subhankarchoudhury/", label: "LinkedIn" },
+  ],
+}]

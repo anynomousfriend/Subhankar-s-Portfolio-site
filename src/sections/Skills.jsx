@@ -53,16 +53,19 @@ function TechStackIcons() {
       icon: <SiTailwindcss size={30} color="#06B6D4" />,
       text: "Tailwind CSS",
     },
-    {
-      id: "mongodb",
-      icon: <SiMongodb size={30} color="#47A248" />,
-      text: "MongoDB",
-    },
-    {
-      id: "sql",
-      icon: <SiPostgresql size={30} color="#336791" />,
-      text: "SQL (PostgreSQL)",
-    }, // Explicitly stating PostgreSQL
+
+    // {
+    //   id: "mongodb",
+    //   icon: <SiMongodb size={30} color="#47A248" />,
+    //   text: "MongoDB",
+    // },
+    // {
+    //   id: "sql",
+    //   icon: <SiPostgresql size={30} color="#336791" />,
+    //   text: "SQL (PostgreSQL)",
+    // }, // Explicitly stating PostgreSQL
+    
+
     {
       id: "vercel",
       icon: (
