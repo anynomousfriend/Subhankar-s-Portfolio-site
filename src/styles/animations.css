@@ -1,0 +1,37 @@
+/* Base reveal animation styles */
+.animate-reveal {
+  animation: reveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes reveal {
+  0% {
+    transform: translateY(40px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Ensure transitions are smooth */
+.transition-all {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Duration utilities */
+.duration-700 {
+  transition-duration: 700ms;
+}
+
+/* Delay utilities */
+.delay-200 { animation-delay: 200ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-800 { animation-delay: 800ms; }
+.delay-1000 { animation-delay: 1000ms; }
+
+/* Add will-change for better performance */
+.animate-reveal, 
+.transition-all {
+  will-change: transform;
+} 

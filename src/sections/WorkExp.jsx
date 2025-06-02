@@ -4,11 +4,11 @@ import { experience } from "../constants";
 const WorkExp = () => {
   return (
     <section id="experience" className="max-container">
-      <div className="work p-5 md:p-4 md:mt-[4.125rem] md:mb-4 md:ml-[4rem] text-white">
-        <h1>Work Experience.</h1>
+      <div className="work px-6 sm:px-8 md:px-12 lg:px-16 py-8 sm:py-10 md:py-12 lg:py-16 text-white">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">Work Experience.</h1>
       </div>
 
-      <div className="card ">
+      <div className="card">
         {experience.map((experience) => (
           <Work key={experience.name} {...experience} />
         ))}
