@@ -1,10 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 body {
-  font-family: "Bebas Neue", "Playfair", serif;
+  font-family: "Inter", system-ui, sans-serif;
   background-color: black;
   scroll-behavior: smooth;
   padding: 0;
@@ -27,22 +25,35 @@ body {
   --breakpoint-xs: 480px;
 }
 
+h1, h2, h3 {
+  font-family: "Poppins", system-ui, sans-serif;
+}
+
 h1 {
-  @apply text-7xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 
-         font-bold  
-         leading-[1.25]
-         mt-4 
-         text-white;
+  @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
+         font-bold
+         leading-[1.1]
+         tracking-tight
+         text-white
+         transition-all
+         duration-300;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 h2 {
-  font-size: 2rem;
-  @apply text-8xl leading-[140px] md:max-w-4xl md:text-left md:text-9xl md:leading-[170px] md:text-[96px];
+  @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
+         leading-tight
+         transition-all
+         duration-300;
 }
+
 h4,
 p {
-  font-family: "Saira Condensed";
+  font-family: "Inter", system-ui, sans-serif;
 }
+
 main {
   @apply max-h-screen h-[35vh] relative bg-primary;
 }

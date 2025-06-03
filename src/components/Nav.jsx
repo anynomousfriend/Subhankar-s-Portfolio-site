@@ -13,7 +13,7 @@ const Nav = () => {
       <nav className="container ml-[1rem] flex items-center justify-between">
         <a
           href="#home"
-          className="text-white font-[playfair-display] font-bold leading-none flex items-center min-w-[2.5rem] min-h-[2.5rem] text-[2.5rem]"
+          className="text-white font-display font-bold leading-none flex items-center min-w-[2.5rem] min-h-[2.5rem] text-[2.5rem]"
         >
           s.
         </a>
@@ -29,7 +29,7 @@ const Nav = () => {
             <li key={item.label}>
               <a
                 href={item.href}
-                className="font-playfair leading-normal text-lg text-slate-gray hover:text-white transition-colors"
+                className="font-sans leading-normal text-lg text-slate-gray hover:text-white transition-colors"
                 onClick={(e) => {
                   const targetId = item.href.replace("#", "");
                   const section = document.getElementById(targetId);

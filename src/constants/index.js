@@ -7,7 +7,7 @@ export const navLinks = [
 
 export const about = [
   {
-    title: "About Me",
+    title: "About Me.",
     description:
       "I'm a finance student turned self-taught design professional with 3 years of experience, now expanding my skillset as a developer and passionate Linux user (arch btw). I previously worked as a UI/UX designer at a leading company, where I successfully delivered 16+ projects spanning web3, DeFi, and healthcare sectors. In addition, I've completed 5 independent design projects as a freelancer, honing my creative and problem-solving abilities.",
   },

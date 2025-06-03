@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'display': ['Poppins', 'system-ui', 'sans-serif'],
+      },
       animation: {
         'reveal': 'reveal 0.7s cubic-bezier(0.24, 0.21, 0.05, 0.99) forwards',
         'slide-up': 'slideUp 0.7s cubic-bezier(0.24, 0.21, 0.05, 0.99) forwards',

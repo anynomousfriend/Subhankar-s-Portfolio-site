@@ -9,7 +9,7 @@ const Footer = () => {
       <footer className="m-4">
         <div className="flex flex-col lg:flex-row justify-between lg:mx-[64px] border-white">
           <div className="left lg:w-1/2 sm:w-4/5 py-4">
-            <h1 className="text-[196px] border-t-2 w-100 sm:text-lg md:text-xl lg:text-5xl font-bold pt-8">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold pt-8 border-t-2 whitespace-nowrap overflow-hidden">
               {footerData.title}
             </h1>
             <p className="text-[16px] p-1 font-light text-left text-white sm:text-lg md:text-xl lg:text-lg mt-2">
@@ -35,14 +35,12 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="text-white text-center py-6 border-t border-white/20">
+        <div className="m-4  text-white text-left py-6 border-t border-white/20">
           <p className="text-sm sm:text-base">
             © {new Date().getFullYear()} {footerData.title} All rights
             reserved.
           </p>
-          <p className="text-xs sm:text-sm mt-2">
-            Built with ❤️ using React and Tailwind CSS
-          </p>
+          
         </div>
       </footer>
     </section>
