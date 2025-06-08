@@ -6,6 +6,7 @@ import Hero from "./sections/Hero";
 import WorkExp from "./sections/WorkExp";
 import Footer from "./sections/Footer";
 import CursorFollower from "./components/CursorFollower";
+import Experiences from "./sections/Experience";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Skills />
       <About />
       <WorkExp />
+      <Experiences />
       <Footer />
     </>
   );

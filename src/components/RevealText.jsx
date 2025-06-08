@@ -1,46 +1,58 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const RevealText = ({ children, className = '' }) => {
+gsap.registerPlugin(ScrollTrigger);
+
+const RevealText = ({
+  children,
+  className = "",
+  delay = 0,
+  waitForScroll = false,
+}) => {
   const elementRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-reveal');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { 
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      }
-    );
+    const element = elementRef.current;
 
-    const currentElement = elementRef.current;
+    gsap.set(element, {
+      y: 50,
+      opacity: 0,
+    });
 
-    if (currentElement) {
-      observer.observe(currentElement);
+    const animation = {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      ease: "power3.out",
+      delay: waitForScroll ? 0 : delay,
+    };
+
+    if (waitForScroll) {
+      gsap.to(element, {
+        ...animation,
+        scrollTrigger: {
+          trigger: element,
+          start: "top bottom",
+          end: "top center",
+          toggleActions: "play none none reverse",
+          scrub: 1,
+        },
+      });
+    } else {
+      gsap.to(element, animation);
     }
 
     return () => {
-      if (currentElement) {
-        observer.unobserve(currentElement);
-      }
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  }, []);
+  }, [delay, waitForScroll]);
 
   return (
-    <div
-      ref={elementRef}
-      className={`translate-y-10 ${className}`}
-      style={{ willChange: 'transform' }}
-    >
+    <div ref={elementRef} className={`overflow-hidden ${className}`}>
       {children}
     </div>
   );
 };
 
-export default RevealText; 
+export default RevealText;

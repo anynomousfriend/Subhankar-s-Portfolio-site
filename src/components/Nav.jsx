@@ -31,12 +31,14 @@ const Nav = () => {
                 href={item.href}
                 className="font-sans leading-normal text-lg text-slate-gray hover:text-white transition-colors"
                 onClick={(e) => {
-                  const targetId = item.href.replace("#", "");
-                  const section = document.getElementById(targetId);
-                  if (section) {
+                  setIsMenuOpen(false);
+                  if (!item.href.startsWith("mailto:") && !item.isExternal) {
                     e.preventDefault();
-                    section.scrollIntoView({ behavior: "smooth" });
-                    setIsMenuOpen(false); // Close menu after clicking
+                    const targetId = item.href.replace("#", "");
+                    const section = document.getElementById(targetId);
+                    if (section) {
+                      section.scrollIntoView({ behavior: "smooth" });
+                    }
                   }
                 }}
               >

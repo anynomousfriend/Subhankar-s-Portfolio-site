@@ -1,12 +1,115 @@
-# React + Vite
+# Subhankar's Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website showcasing my journey from finance to UI/UX design and development. Built with React and featuring smooth animations, this portfolio highlights my projects and experiences in Web3, DeFi, and healthcare sectors.
 
-Currently, two official plugins are available:
+![Portfolio Preview](./public/Gradient.svg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Technologies Used
 
-## Expanding the ESLint configuration
+- **Framework:** React 19
+- **Build Tool:** Vite 6
+- **Styling:**
+  - TailwindCSS 4
+  - Custom CSS animations
+- **Animations:**
+  - GSAP (GreenSock Animation Platform)
+  - Custom scroll-triggered animations
+- **Code Quality:**
+  - ESLint
+  - Modern JavaScript (ES6+)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- 🎨 Modern, minimalist design
+- 📱 Fully responsive layout
+- 🔄 Smooth scroll animations
+- 💫 GSAP-powered transitions
+- 🖱️ Custom cursor effects
+- 📧 Direct email contact integration
+- 🌗 Custom scrollbar with hover effects
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher recommended)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/subhankar-portfolio.git
+   cd subhankar-portfolio
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open your browser and visit:
+   ```
+   http://localhost:5173
+   ```
+
+## 🏗️ Project Structure
+
+```
+src/
+├── components/     # Reusable UI components
+├── sections/       # Main page sections
+├── constants/      # Configuration and content
+├── styles/        # Global styles and animations
+└── assets/        # Static assets
+```
+
+## 📦 Build for Production
+
+To create a production build:
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+The built files will be in the `dist` directory.
+
+To preview the production build:
+
+```bash
+npm run preview
+# or
+yarn preview
+```
+
+## 🔧 Customization
+
+1. Update personal information in `src/constants/index.js`
+2. Modify styles in `src/index.css` and `src/styles/animations.css`
+3. Add/remove sections in `src/App.jsx`
+
+## 📄 License
+
+This project is available for reuse with attribution. Feel free to use it as a template for your own portfolio!
+
+## 👥 Contact
+
+For any queries or collaboration opportunities, feel free to reach out:
+
+- Email: officialsubhankar01@gmail.com
+- LinkedIn: [Subhankar Choudhury](https://www.linkedin.com/in/subh-choudhury/)
+- GitHub: [anynomousfriend](https://github.com/anynomousfriend)
