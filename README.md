@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website showcasing my journey from finance to UI/UX design and development. Built with React and featuring smooth animations, this portfolio highlights my projects and experiences in Web3, DeFi, and healthcare sectors.
 
-![Portfolio Preview](./public/Gradient.svg)
+![Portfolio Preview](./public/Image-preview.png)
 
 ## 🛠 Technologies Used
 
