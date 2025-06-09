@@ -17,42 +17,76 @@ const Nav = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    document.body.style.overflow = isMenuOpen ? "auto" : "hidden";
   };
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-[1000] transition-all duration-300 ${
-        scrolled
+        scrolled && !isMenuOpen
           ? "bg-black/90 backdrop-blur-sm border-b border-transparent"
           : "bg-transparent"
       }`}
     >
-      <nav className="container mx-auto px-9 py-8 flex items-center justify-between">
+      <nav className="container mx-auto px-9 py-8 flex items-center justify-between relative">
+        {/* Logo */}
         <a
           href="#hero"
-          className="text-white font-display font-bold leading-none flex items-center min-w-[2.5rem] min-h-[2.5rem] text-[2.5rem]"
+          className="text-white font-display font-bold leading-none flex items-center min-w-[2.5rem] min-h-[2.5rem] text-[2.5rem] z-[1001]"
           onClick={(e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
+            setIsMenuOpen(false);
           }}
         >
           s.
         </a>
 
-        <ul
-          className={`text-white space-x-6 md:flex ${
+        {/* Mobile Menu */}
+        <div
+          className={`${
             isMenuOpen
-              ? "flex flex-col fixed inset-0 bg-black bg-opacity-90 items-center justify-center space-y-8 space-x-0 z-50"
+              ? "fixed top-0 left-0 w-full min-h-screen flex items-center justify-center bg-black z-[999]"
               : "hidden"
-          }`}
+          } md:hidden`}
         >
+          <ul className="flex flex-col items-center justify-center gap-16 -mt-20">
+            {navLinks.map((item) => (
+              <li
+                key={item.label}
+                className="relative transform transition-all duration-300 hover:scale-110"
+              >
+                <a
+                  href={item.href}
+                  className="font-sans text-3xl font-medium text-white/80 hover:text-white tracking-wide py-4 px-8 block transition-all duration-300"
+                  onClick={(e) => {
+                    if (!item.href.startsWith("mailto:") && !item.isExternal) {
+                      e.preventDefault();
+                      const targetId = item.href.replace("#", "");
+                      const section = document.getElementById(targetId);
+                      if (section) {
+                        section.scrollIntoView({ behavior: "smooth" });
+                        setIsMenuOpen(false);
+                        document.body.style.overflow = "auto";
+                      }
+                    }
+                  }}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex md:items-center md:space-x-8">
           {navLinks.map((item) => (
             <li key={item.label}>
               <a
                 href={item.href}
-                className="font-sans leading-normal text-lg text-slate-gray hover:text-white transition-colors"
+                className="font-sans text-lg text-white/70 hover:text-white transition-colors"
                 onClick={(e) => {
-                  setIsMenuOpen(false);
                   if (!item.href.startsWith("mailto:") && !item.isExternal) {
                     e.preventDefault();
                     const targetId = item.href.replace("#", "");
@@ -67,23 +101,16 @@ const Nav = () => {
               </a>
             </li>
           ))}
-          {isMenuOpen && (
-            <button
-              onClick={toggleMenu}
-              className="absolute top-8 right-8 text-white md:hidden"
-            >
-              ✕
-            </button>
-          )}
         </ul>
-        {!isMenuOpen && (
-          <button
-            onClick={toggleMenu}
-            className="text-white md:hidden z-50 text-2xl"
-          >
-            ☰
-          </button>
-        )}
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={toggleMenu}
+          className="text-white md:hidden z-[1001] text-2xl"
+          aria-label="Toggle menu"
+        >
+          {isMenuOpen ? "✕" : "☰"}
+        </button>
       </nav>
     </header>
   );

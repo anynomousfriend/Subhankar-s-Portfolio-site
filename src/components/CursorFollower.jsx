@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 const CursorFollower = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -8,19 +8,19 @@ const CursorFollower = () => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
 
-    window.addEventListener('mousemove', updateCursorPosition);
+    window.addEventListener("mousemove", updateCursorPosition);
 
     return () => {
-      window.removeEventListener('mousemove', updateCursorPosition);
+      window.removeEventListener("mousemove", updateCursorPosition);
     };
   }, []);
 
   return (
     <div
-      className="fixed pointer-events-none z-50 mix-blend-difference"
+      className="fixed pointer-events-none z-5000 mix-blend-difference"
       style={{
         transform: `translate(${position.x - 24}px, ${position.y - 24}px)`,
-        transition: 'transform 0.15s ease-out'
+        transition: "transform 0.15s ease-out",
       }}
     >
       <div className="w-12 h-12 bg-white rounded-full opacity-50 blur-md" />
@@ -29,4 +29,4 @@ const CursorFollower = () => {
   );
 };
 
-export default CursorFollower; 
+export default CursorFollower;
