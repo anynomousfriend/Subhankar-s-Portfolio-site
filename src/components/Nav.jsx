@@ -1,19 +1,40 @@
 import { navLinks } from "../constants";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 20;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <header className="padding-x py-8 px-9 absolute z-1000 w-full">
-      <nav className="container ml-[1rem] flex items-center justify-between">
+    <header
+      className={`fixed top-0 left-0 right-0 z-[1000] transition-all duration-300 ${
+        scrolled
+          ? "bg-black/90 backdrop-blur-sm border-b border-transparent"
+          : "bg-transparent"
+      }`}
+    >
+      <nav className="container mx-auto px-9 py-8 flex items-center justify-between">
         <a
-          href="#home"
+          href="#hero"
           className="text-white font-display font-bold leading-none flex items-center min-w-[2.5rem] min-h-[2.5rem] text-[2.5rem]"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
         >
           s.
         </a>
