@@ -15,7 +15,7 @@ import {
   SiVercel,
   SiNodedotjs,
   SiSolidity,
-  SiEthereum
+  SiEthereum,
 } from "react-icons/si";
 
 function TechStackIcons() {
@@ -77,7 +77,6 @@ function TechStackIcons() {
     //   text: "SQL (PostgreSQL)",
     // }, // Explicitly stating PostgreSQL
 
-
     {
       id: "vercel",
       icon: (
@@ -96,9 +95,12 @@ function TechStackIcons() {
   ];
 
   return (
-    <div className="p-6 bg-black rounded-lg shadow-xl max-w-7xl mx-auto my-8">
-      <h1 className="text-3xl font-bold text-white mb-12 text-center">
-      My Tech & Tools.
+    <div
+      id="skills"
+      className="p-8 sm:p-10 md:p-12 lg:p-16 bg-black rounded-lg shadow-xl max-w-7xl mx-auto mt-24 sm:mt-28 md:mt-32 lg:mt-36 mb-16 sm:mb-20 md:mb-24 lg:mb-28"
+    >
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-12 sm:mb-16 text-center">
+        My Tech & Tools.
       </h1>
       <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
         {techSkills.map((skill) => (

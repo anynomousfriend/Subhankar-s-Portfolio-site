@@ -1,7 +1,9 @@
 export const navLinks = [
   { href: "#hero", label: "Home" },
   { href: "#about", label: "About Me" },
+  { href: "#skills", label: "Skills" },
   { href: "#experience", label: "Work" },
+
   {
     href: "mailto:officialsubhankar01@gmail.com?subject=Portfolio%20Inquiry&body=Hi%20Subhankar%2C%0D%0A%0D%0AI%20visited%20your%20portfolio%20and%20would%20love%20to%20connect.",
     label: "Contact Me",

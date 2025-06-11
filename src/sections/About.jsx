@@ -20,17 +20,17 @@ const About = () => {
     // Initial state
     gsap.set([title, subtitle, description], {
       opacity: 0,
-      y: 20,
+      y: 30, // Increased initial offset for smoother reveal
     });
 
     // Create timeline
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: section,
-        start: "top 80%",
-        end: "center center",
+        start: "top 85%", // Start earlier
+        end: "top 15%", // End later for more gradual animation
         toggleActions: "play none none reverse",
-        scrub: 1, // Smoother scrubbing
+        scrub: 1.5, // Increased scrub time for smoother animation
         markers: false,
         smoothChildTiming: true,
       },
@@ -39,28 +39,28 @@ const About = () => {
     tl.to(title, {
       opacity: 1,
       y: 0,
-      duration: 1.5,
-      ease: "power4.out",
+      duration: 2,
+      ease: "power2.out", // Smoother easing
     })
       .to(
         subtitle,
         {
           opacity: 1,
           y: 0,
-          duration: 1.5,
-          ease: "power4.out",
+          duration: 2,
+          ease: "power2.out",
         },
-        "-=1.3"
+        "-=1.7" // More overlap for smoother sequence
       )
       .to(
         description,
         {
           opacity: 1,
           y: 0,
-          duration: 1.5,
-          ease: "power4.out",
+          duration: 2,
+          ease: "power2.out",
         },
-        "-=1.3"
+        "-=1.7"
       );
 
     return () => {

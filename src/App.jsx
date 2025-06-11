@@ -9,13 +9,17 @@ import CursorFollower from "./components/CursorFollower";
 import Experiences from "./sections/Experience";
 
 const App = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <CursorFollower />
       <Nav />
       <Hero />
-      <Skills />
       <About />
+      <Skills />
       <WorkExp />
       <Experiences />
       <Footer />

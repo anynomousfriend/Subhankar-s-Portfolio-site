@@ -22,10 +22,10 @@ const Nav = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-[1000] transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-[1000] transition-all duration-500 ease-in-out ${
         scrolled && !isMenuOpen
-          ? "bg-black/90 backdrop-blur-sm border-b border-transparent"
-          : "bg-transparent"
+          ? "bg-black/90 backdrop-blur-sm border-b border-white/10"
+          : "bg-transparent border-b border-transparent"
       }`}
     >
       <nav className="container mx-auto px-9 py-8 flex items-center justify-between relative">
@@ -65,7 +65,15 @@ const Nav = () => {
                       const targetId = item.href.replace("#", "");
                       const section = document.getElementById(targetId);
                       if (section) {
-                        section.scrollIntoView({ behavior: "smooth" });
+                        const headerOffset = 100;
+                        const elementPosition =
+                          section.getBoundingClientRect().top;
+                        const offsetPosition =
+                          elementPosition + window.pageYOffset - headerOffset;
+                        window.scrollTo({
+                          top: offsetPosition,
+                          behavior: "smooth",
+                        });
                         setIsMenuOpen(false);
                         document.body.style.overflow = "auto";
                       }
@@ -92,7 +100,15 @@ const Nav = () => {
                     const targetId = item.href.replace("#", "");
                     const section = document.getElementById(targetId);
                     if (section) {
-                      section.scrollIntoView({ behavior: "smooth" });
+                      const headerOffset = 100;
+                      const elementPosition =
+                        section.getBoundingClientRect().top;
+                      const offsetPosition =
+                        elementPosition + window.pageYOffset - headerOffset;
+                      window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth",
+                      });
                     }
                   }
                 }}

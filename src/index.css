@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 0;
@@ -38,7 +42,6 @@ html:hover {
 body {
   font-family: "Inter", system-ui, sans-serif;
   background-color: black;
-  scroll-behavior: smooth;
   padding: 0;
   margin: 0;
   box-sizing: border-box;

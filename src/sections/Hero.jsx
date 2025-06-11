@@ -40,16 +40,18 @@ const Hero = () => {
       </div>
       <div className="wrapper relative z-10 w-full max-w-7xl mx-auto">
         <header className="w-full flex flex-col mt-4 sm:mt-6 md:mt-9 items-center lg:mt-[100px] lg:mb-[1rem]">
-          <RevealText delay={0.2} className="w-full">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-wide text-center sm:text-left px-2 sm:px-0 text-white">
-              <AnimatedLetters text={heroData.title} />
-            </h1>
-          </RevealText>
-          <RevealText delay={0.4} className="w-full">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mt-2 sm:mt-3 w-full text-center sm:text-left">
-              {heroData.emoji}
-            </h2>
-          </RevealText>
+          <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-4 w-full">
+            <RevealText delay={0.2} className="w-full sm:w-auto">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-wide text-center sm:text-left px-2 sm:px-0 text-white">
+                <AnimatedLetters text={heroData.title} />
+              </h1>
+            </RevealText>
+            <div className="w-full sm:w-auto">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center sm:text-left opacity-0 animate-[fadeIn_0.5s_ease-in_1.2s_forwards]">
+                {heroData.emoji}
+              </h2>
+            </div>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 mt-4 sm:mt-6 md:mt-8 lg:mt-10 w-full">
             {heroData.skills.map(renderSkill)}
           </div>
